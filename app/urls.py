@@ -17,11 +17,12 @@ from django.contrib import admin
 from django.conf.urls import url
 from django.urls import path, include
 from rest_framework_swagger.views import get_swagger_view
+# from catalog.views import SearchViewSet, SearchRangePrice
 
 schema = get_swagger_view(title='API')
 
 urlpatterns = [
     url(r'^$', schema),
     path('admin/', admin.site.urls),
-    path('api/', include('catalog.urls'), name='api')
+    path('api/', include('catalog.urls'), name='api'),
 ]

@@ -3,14 +3,15 @@ from .models import Product, Category
 
 
 class ProductSerializer(serializers.ModelSerializer):
+    category = serializers.StringRelatedField(many=True, read_only=True)
 
     class Meta:
         model = Product
-        fields = ('id', 'title', 'price', 'category', 'is_active', 'date')
+        fields = '__all__'
 
 
 class CategorySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Category
-        fields = ('id', 'title', 'slug')
+        fields = ('id', 'title', 'slug',)

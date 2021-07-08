@@ -3,3 +3,6 @@ app/__pycache__/settings.cpython-39.pyc
 app/__pycache__/urls.cpython-39.pyc
 .gitignore
 catalog/__pycache__/__init__.cpython-39.pyc
+env/
+
+
